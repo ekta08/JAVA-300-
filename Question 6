@@ -1,0 +1,49 @@
+Find the LCM of 2 numbers.
+
+
+
+Input Format:
+
+First line contains two space separated positive integers, n and m. 
+
+Output Format:
+
+gives the LCM of two numbers 
+
+
+
+Sample Input:
+
+10  20
+
+Sample Output:
+
+20
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+solution :
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int m = scan.nextInt();
+        int lcm;
+        if(n>m){
+            lcm=n;
+        }else{
+            lcm=m;
+        }
+        
+        while(true){
+            if(lcm%n == 0 && lcm%m == 0){
+                System.out.print(lcm);
+                break;
+            }
+            ++lcm;
+        }
+    }
+}
