@@ -1,0 +1,42 @@
+Write a program to  find the perimeter of the circle.
+
+Consider pi = 3.142
+
+
+
+Input Format:
+
+First line contains an Integer, radius of a circle
+
+Output Format:
+
+Gives the perimeter of circle
+
+The area of the circle should have four decimal places only.
+
+
+
+Sample Input:
+
+12
+
+Sample Output:
+
+75.4080
+
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+solution :
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        double pi=3.142;
+        Scanner scan = new Scanner(System.in);
+        int radius=scan.nextInt();
+        double perimeter= (double)2*pi*radius;
+        System.out.printf("%.4f", perimeter);
+    }
+}
