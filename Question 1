@@ -1,0 +1,44 @@
+Write a program to find the area of the circle.
+
+Consider pi = 3.142
+
+
+
+Input Format:
+
+First line contains an Integer, radius of a circle
+
+Output Format:
+
+Gives the area of circle.
+
+The area of the circle should have four decimal places only.
+
+
+
+Sample Input:
+
+18
+
+Sample Output:
+
+1018.0080
+
+
+
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+solution: 
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        double pi = 3.142;
+        Scanner scan = new Scanner(System.in);
+        int radius= scan.nextInt();
+        double area = (double)(pi*radius*radius);
+        System.out.printf("%.4f",area);
+    }
+}
