@@ -1,0 +1,41 @@
+Find the sum of digits in an integer
+
+
+
+Input Format:
+
+First line consist of a positive integer n
+
+Output Format:
+
+Gives the sum of digits in an integer n
+
+
+
+Sample Input:
+
+123
+
+Sample Output:
+
+6
+
+------------------------------------------
+------------------------------------------
+
+solution :
+
+import java.util.Scanner;
+class Solutions{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int sum = 0,digit;
+        while(n>0){
+            digit=n%10;
+            sum+=digit;
+            n/=10;
+        }
+        System.out.println(sum);
+    }
+}
