@@ -1,0 +1,38 @@
+Write a program to find the area of a square.
+
+
+
+Input Format:
+
+First line contains an integer, side of a square.
+
+Output Format:
+
+Gives the area of square
+
+
+
+Sample Input:
+
+24
+
+Sample Output:
+
+Area of a square is 576
+
+-------------------------------------------------
+-------------------------------------------------
+
+solution :
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int side =scan.nextInt();
+        int area = side*side;
+        System.out.println("Area of a square is");
+        System.out.println(area);
+       
+    }
+}
