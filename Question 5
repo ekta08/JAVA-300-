@@ -1,0 +1,40 @@
+Write a program find the GCD of 2 numbers.
+
+
+
+Input Format:
+
+First line contains two space separated positive integers, n and m. 
+
+Output Format:
+
+Gives the GCD of two numbers 
+
+
+
+Sample Input:
+
+81  183
+
+Sample Output:
+
+3
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+solution :
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+       Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        int m=scan.nextInt();
+        int gcd=1;
+        for(int i=1;i<=n&&i<=m;i++){
+         if (n % i == 0 && m % i == 0)
+           gcd = i;
+        }
+        System.out.println(gcd);
+}
+}
