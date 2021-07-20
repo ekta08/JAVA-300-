@@ -1,0 +1,40 @@
+Write a program to find the sum of first N natural numbers using loops.
+
+
+
+Input Format:
+
+First line consist of a positive integer n
+
+Output Format:
+
+Gives the sum of n natural numbers.
+
+
+
+Sample Input:
+
+100
+
+Sample Output:
+
+5050
+
+
+---------------------------------------------------
+---------------------------------------------------
+
+solution :
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+       int i, sum=0;
+       for(i=1;i<=n;i++){
+           sum+=i;
+       }
+       System.out.println(sum);
+}
+}
