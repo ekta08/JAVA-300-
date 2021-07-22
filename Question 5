@@ -1,0 +1,39 @@
+Find the factors of a given number n.
+
+
+
+Input Format:
+
+First line consist of a positive integer n
+
+Output Format:
+
+Print the factors of the number on a single line
+
+
+
+Sample Input:
+
+10
+
+Sample Output:
+
+1 2 5 10
+
+------------------------------------------------------
+------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solutions{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+       int n= scan.nextInt();
+       for(int i =1;i<=n;i++){
+           if(n%i == 0){
+              System.out.print(i + " ");
+           }
+       }
+    }
+}
