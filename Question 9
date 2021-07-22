@@ -1,0 +1,62 @@
+Wap to swap two numbers.
+
+
+
+Input Format:
+
+First line consist of a positive integer n1
+
+Second line consist of a positive integer n2
+
+Output Format:
+
+Prints the required result before and after swapping the numbers.
+
+
+
+Sample Input:
+
+10
+
+20
+
+Sample Output:
+
+Before Swapping
+
+10 
+
+20
+
+After Swapping 
+
+20 
+
+10
+
+
+----------------------------------------------------
+----------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solutions{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        long n1 = scan.nextLong();
+        long n2 = scan.nextLong();
+        long temp;
+        System.out.println("Before Swapping");
+        System.out.println(n1);
+        System.out.println(n2);
+        temp=n2;
+        n2=n1;
+        n1=temp;
+        System.out.println("After Swapping");
+        System.out.println(n1);
+        System.out.println(n2);
+        
+        
+    }
+}
