@@ -1,0 +1,50 @@
+WAP to check if the number is a prime number or not. Print YES if the number is prime number else print NO.
+
+
+
+Input Format:
+
+First line consist of a positive integer n
+
+Output Format:
+
+Print the required answer on a single line
+
+
+
+Sample Input:
+
+29
+
+Sample Output:
+
+YES
+
+
+----------------------------------------------
+----------------------------------------------
+solution:- 
+
+import java.util.Scanner;
+class Solutions{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int i, prime=0;
+        int m = n/2;
+        if(n<=1){
+            System.out.println("NO");
+        }
+        for(i=2;i<=m;i++){
+            if(n%i==0){
+                System.out.println("NO");
+            prime=1;
+            break;
+        }
+        }
+        if(prime == 0){
+            System.out.println("YES");
+        }
+    
+}
+}
