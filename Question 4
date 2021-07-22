@@ -1,0 +1,41 @@
+Find factorial of a given number
+
+
+
+Input Format:
+
+First line consist of a positive integer n
+
+Output Format:
+
+Gives the factorial of a number
+
+
+
+Sample Input:
+
+9
+
+Sample Output:
+
+362880
+
+
+
+------------------------------------------
+------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solutions{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        Long n = scan.nextLong();
+        long fact=1L;
+       for(int i=1;i<=n;i++){
+          fact=fact*i ;
+       }
+        System.out.println(fact);
+    }
+}
