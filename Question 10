@@ -1,0 +1,50 @@
+Wap to convert the given decimal number into equivalent binary number.
+
+
+
+Input Format:
+
+First line consist of a positive integer n
+
+Output Format:
+
+Prints the equivalent binary number.
+
+
+
+Sample Input:
+
+10
+
+Sample Output:
+
+1010
+
+--------------------------------------
+--------------------------------------
+
+
+solution:-
+
+import java.util.Scanner;
+class Solutions{
+    public static void convert(int num){
+        int[] binary= new int [1000];
+        int index=0;
+        while(num>0){
+          binary[index++] = num%2;
+           num = num/2;
+        }
+        for(int i = index-1;i >= 0;i--){
+        System.out.print(binary[i]);
+     }
+  }
+  
+      public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n =scan.nextInt();
+        convert(n);
+            
+        
+    }
+}
