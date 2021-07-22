@@ -1,0 +1,40 @@
+WAP to check if the given year is a leap year or not. Print YES if the year is leap year else print NO.
+
+
+
+Input Format:
+
+First line consist of a integer n denoting year
+
+Output Format:
+
+Print the required answer on a single line
+
+
+
+Sample Input:
+
+2012
+
+Sample Output:
+
+YES
+
+-----------------------------------------------
+-----------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solutions{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        if((n%4 == 0 && n%100 != 0)|| n%400==0){
+            System.out.println("YES");
+        }else {
+            System.out.println("NO");
+        }
+        
+    }
+}
