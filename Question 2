@@ -1,0 +1,44 @@
+WAP to reverse a given number
+
+
+
+Input Format:
+
+First line consist of a positive integer n
+
+Output Format:
+
+Gives the reversed number
+
+
+
+Sample Input:
+
+12345
+
+Sample Output:
+
+54321
+
+
+---------------------------------------------
+---------------------------------------------
+
+solution:-
+
+
+import java.util.Scanner;
+class Solutions{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+       int n= scan.nextInt();
+       int r=0;
+       int temp;
+       while(n>0){
+           temp= n%10;
+           r = r*10+temp;
+           n=n/10;
+       }
+           System.out.println(r);
+    }
+}
