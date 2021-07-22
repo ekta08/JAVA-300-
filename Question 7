@@ -1,0 +1,46 @@
+WAP to print Fibonacci series till a given number n.
+
+A Fibonacci series is a series of numbers in which next number is the sum of previous two numbers for example 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 etc. The first two numbers of Fibonacci series are 0 and 1.
+
+
+
+Input Format:
+
+First line consist of a positive integer n
+
+Output Format:
+
+Print the Fibonacci series on a single line
+
+
+
+Sample Input:
+
+10
+
+Sample Output:
+
+0 1 1 2 3 5 8 13 21 34
+
+
+---------------------------------------------------
+---------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solutions{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int sum,n1=0,n2=1;
+        System.out.print(n1);
+        for(int i=1;i<n;i++){
+            sum=n1+n2;
+            System.out.print(" " + n2);
+            n1=n2;
+            n2=sum;
+            
+        }
+    }
+}
