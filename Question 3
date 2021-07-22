@@ -1,0 +1,48 @@
+WAP to check if a number is palindrome or not. Print YES if the number is a palindrome else print NO.
+
+
+
+Input Format:
+
+First line consist of a positive integer n
+
+Output Format:
+
+Print the required answer on a single line
+
+
+
+Sample Input:
+
+9889
+
+Sample Output:
+
+YES
+
+---------------------------------------------------------------
+---------------------------------------------------------------
+
+
+solution:-
+
+import java.util.Scanner;
+class Solutions{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        long n =scan.nextLong();
+        long temp =1L;
+        long rev =0L;
+        long m=n;
+        while(n>0){
+            temp=n%10;
+            rev=rev*10+temp;
+            n=n/10;
+        }
+        if(m==rev){
+            System.out.println("YES");
+        }else{
+            System.out.println("NO");
+        }
+    }
+}
