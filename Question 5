@@ -1,0 +1,52 @@
+Write a program to print the number of non-zero elements.
+
+
+
+Input Format:
+
+
+First line contains single integer N
+
+Next line contains N space separated integer values
+
+Output Format:
+
+Print single integer containing number of non-zero elements present in an array
+
+
+
+Sample Input:
+
+
+5
+
+23 22 0 9 2
+
+Sample Output:
+
+4
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int[] a= new int[n];
+        for(int i =0;i<a.length;i++){
+            a[i]=scan.nextInt();
+        }
+        int count=n;
+        for(int i =0;i<a.length;i++){
+            if(a[i] == 0){
+               count=count-1;
+        }
+        }
+        System.out.println(count);
+        
+    }
+}
