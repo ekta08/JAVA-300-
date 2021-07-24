@@ -1,0 +1,57 @@
+Write a program to print the number of even elements and odd elements.
+
+
+
+Input Format:
+
+
+First line contains single integer N
+
+Next line contains N space separated integer values
+
+Output Format:
+
+First line contains number of even elements present in an array
+
+Next line contains number of odd elements present in an array
+
+
+
+Sample Input:
+
+8
+
+2 9 32 1 78 3 7 2
+
+Sample Output:
+
+4
+
+4
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n =scan.nextInt();
+        int a[]=new int[n];
+        int even =0,odd=0;
+        for(int i=0;i<a.length;i++){
+            a[i]=scan.nextInt();
+        }
+        for(int i=0;i<a.length;i++){
+            if(a[i]%2==0){
+                even++;
+            }else{
+                odd++;
+            }
+        }
+        System.out.println(even);
+        System.out.println(odd);
+    }
+}
