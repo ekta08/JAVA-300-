@@ -1,0 +1,47 @@
+Write a program to find the sum of all elements in an array.
+
+
+
+
+Input Format:
+
+First line contains single integer N
+
+Next line contains N space separated integer values
+
+Output Format:
+
+Print single integer containing sum of all elements present in an array
+
+
+
+Sample Input:
+
+8
+
+23 22 15 9 2 1 3 20
+
+Sample Output:
+95
+
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int a[]=new int[n];
+        long max=a[0];
+        for(int i =0;i<a.length;i++){
+            a[i]=scan.nextInt();
+        }
+        for(int i =0;i<a.length;i++){
+            max+=a[i];
+        }
+        System.out.println(max);
+    }
+}
