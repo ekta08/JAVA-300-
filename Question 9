@@ -1,0 +1,50 @@
+Write a program to find the product of all numbers in the array.
+
+
+
+
+Input Format:
+
+First line contains single integer N
+
+Next line contains N space separated integer values
+
+Output Format:
+
+Print single integer containing product of all elements present in an array
+
+
+
+Sample Input:
+
+4
+
+23 2 15 5
+
+Sample Output:
+
+3450
+
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int[]a= new int[n];
+        long max=1L;
+        for(int i=0;i<a.length;i++){
+            a[i]=scan.nextInt();
+        }
+         for(int i=0;i<a.length;i++){
+             max=max * a[i];
+             
+         }
+         System.out.println(max);
+    }
+}
