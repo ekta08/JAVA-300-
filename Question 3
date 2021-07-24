@@ -1,0 +1,60 @@
+Write a program to calculate the compound interest.
+
+Compound interest =  P (1 + R/n) (nt) - P
+
+
+
+Input Format:
+
+First line contains positive integer P
+
+Second line contains positive integer R
+
+Third line contains positive integer t
+
+Fourth line contains positive integer n
+
+P is principal amount.
+R is the annual interest rate.
+t is the time the money is invested or borrowed for.
+n is the number of times that interest is compounded per unit t
+
+Output Format:
+
+Prints the required result on single line
+
+The result contains two decimal values only
+
+
+
+Sample Input:
+
+10
+
+20
+
+2
+
+1
+
+Sample Output:
+
+4400.00
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int p=scan.nextInt();
+        int r=scan.nextInt();
+        int t=scan.nextInt();
+        int n=scan.nextInt();
+        double cp =(p * Math.pow(1 + (r / n), n * t))-p;
+        System.out.printf("%.2f",cp);
+    }
+}
