@@ -1,0 +1,52 @@
+Find the difference between the sum of even and odd numbers in an array.
+
+
+
+
+Input Format:
+
+First line contains single integer N
+
+Next line contains N space separated integer values
+
+Output Format:
+
+Print single integer containing the difference between the sum of even numbers & odd numbers.
+
+Sample Input:
+
+8
+
+2 9 32 1 78 3 7 2
+
+Sample Output:
+
+94
+
+
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int[]a= new int[n];
+        long odd=a[0],even=a[0];
+        for(int i=0;i<a.length;i++){
+            a[i]=scan.nextInt();
+        }
+         for(int i=0;i<a.length;i++){
+             if(a[i]%2==0){
+                 even=even+a[i];
+             }else{
+                 odd=odd+a[i];
+             }
+         }
+       
+         System.out.println(Math.abs( even-odd));
+    }
+}
