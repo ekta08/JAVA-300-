@@ -1,0 +1,65 @@
+Write a Program to find the index of a specific number k in a sorted array. If the number is repeated more than once print the index of first occurrence of an element
+
+
+Input Format:
+
+First line contains single integer N
+
+Second line contains N space separated integer values
+
+Third Line Take Input Value Of K
+
+Output Format:
+
+Position Of K In The Given Array.
+
+Print -1 if element is not found.
+
+
+Sample Input:
+
+5
+
+23 22 15 9 2
+
+9
+
+Sample Output:
+
+1
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+import java.util.Arrays;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int[]a=new int[n];
+        for(int i=0;i<a.length;i++){
+            a[i]=scan.nextInt();
+        }
+        int k=scan.nextInt();
+        int index=-1,count=0;
+        Arrays.sort(a);
+            
+        
+        for(int i=0;i<a.length;i++){
+            if(a[i]==k){
+               index=i;
+               count++;
+                if(count==1){
+                   System.out.println(index);
+               }
+            }
+        }
+        if(count==0){
+            System.out.println(index);
+        }
+        
+    }
+}
