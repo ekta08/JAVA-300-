@@ -1,0 +1,118 @@
+Kirti and her friends are walking along the H-height boundary wall, and there is a security guard next to the wall. They don’t want them to be seen by the guard. To do this everyone’s height should not exceed H. When anyone has a height larger than H, he or she must bent down so that the guard does not see them. The heights of each person are given to you.
+
+Consider the width of the person walking upright to be equal to 1, while the width of the person who is bent is equal to 2. While walking friends want to talk to each other. So they want to be as close as possible and walk in a row. What is the required road distance, so that friends can walk in a row and the guard cannot see them?
+
+ 
+
+Function Description
+
+Complete the roadDistance function in the editor. It has the following parameter(s):
+
+ 
+
+                Name        Type              Description
+______________________________________________________________________________________
+Parameters     heights  INTEGER ARRAY     Height of each person
+
+                 H        INTEGER         Heights of boundary wall
+______________________________________________________________________________________
+Return         The function must return an INTEGER denoting the required road distance
+_______________________________________________________________________________________
+
+Constraints:
+
+ 1<=N<=10^5
+
+ 1<=heights[i]<=10^5
+
+ 1<=H<=10^5
+
+ 
+
+Input Format For Custom Testing
+
+The first line contains an integer, N, denoting the number of persons
+
+Each line I of the N subsequent lines(Where 0<=i<N) contains an integer describing height of the ith person
+
+The next lines contains an integer, H, denoting the height of boundary wall
+
+ 
+
+Sample cases     Input      Output        Description
+_____________________________________________________________________________
+                   3           3          All persons have height less than equal to boundary wall and hence nobody bent
+
+                   1
+
+                   2
+
+                   3
+                   
+                   3
+
+_______________________________________________________________________________
+
+                   3           4            Only person 3 will bend. Therefore 1 + 1 + 2 = 4
+
+                   4
+
+                   5
+
+                  14
+
+                   7
+
+_________________________________________________________________________________
+                   
+                   6            11            Every one has height greater than boundary wall height except the last person. Hence all of them will bend down except the last one.
+                                               Therefore 2+2+2+2+2+1 = 11.
+                   7
+
+                   6
+
+                   8
+
+                   9
+
+                   10
+
+                   5
+
+                   5
+
+___________________________________________________________________________________
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void roadDistance(int[]a,int h){
+       int i,rd=0;
+       for(i=0;i<a.length;i++){
+           if(a[i]<=h){
+               rd+=1;
+           }else{
+               rd+=2;
+           }
+       }
+       
+      System.out.println(rd);
+    }
+    public static void main (String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n =scan.nextInt();
+         int[]a=new int[n];
+         for(int i=0;i<a.length;i++){
+             a[i]=scan.nextInt();
+         }
+        int h= scan.nextInt();
+       roadDistance(a,h);
+    }
+}
+
+
+
