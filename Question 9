@@ -1,0 +1,53 @@
+Write a Program to sort the given array in Descending order.
+
+
+
+Input Format
+
+First line contains single integer N
+
+Next line contains N space separated integer values
+
+Output Format:
+
+print space separated N integer values in ascending order
+
+
+
+Sample Input:  
+5
+
+23 22 15 9 2
+
+Sample Output:
+23 22 15 9 2    
+
+----------------------------------------------------------
+----------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<a.length;i++){
+            a[i]=scan.nextInt();
+        }
+        int min=0;
+        for(int i=0;i<a.length;i++){
+             for(int j=i+1;j<a.length;j++){
+                 if(a[i]>a[j]){
+                     min=a[j];
+                     a[j]=a[i];
+                     a[i]=min;
+                 }
+             }
+        }
+         for(int i=a.length-1;i>=0;i--){
+           System.out.print(a[i]+" ");
+         }
+    }
+}
