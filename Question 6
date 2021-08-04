@@ -1,0 +1,54 @@
+Find the index of the smallest number in an array. If the smallest number is repeated more than once print the index of the first occurrence of an element
+
+
+
+Input Format:
+
+
+First-line contains a single integer N
+
+The next line contains N space-separated integer values
+
+Output Format:
+Print single integer containing the index of smallest number in an array
+
+
+
+Sample Input:
+
+5
+
+23 45 9 123 2
+
+Sample Output:
+
+4
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+soltuion:-
+
+import java.util.Scanner;
+import java.io.*;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int a[]=new int[n];
+       
+        for(int i=0;i<a.length;i++){
+            a[i]=scan.nextInt();
+        }
+         int min=a[0],index=0;
+        for(int i=0;i<a.length;i++){
+            if(a[i]<min){
+                min=a[i];
+                index=i;
+            }
+        }
+        System.out.println(index);
+            
+             
+}
+}
