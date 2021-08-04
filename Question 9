@@ -1,0 +1,63 @@
+Write a Program to find the largest number in the matrix.
+
+
+
+
+Input Format:
+
+First-line contains space-separated integers N, M representing the number of rows and columns in a matrix
+
+Then follows N lines where each line contains M integers, where each line denotes the row and each number in each line denotes the column.
+
+Output Format:
+
+Print single integer representing the  largest number in the matrix
+
+
+
+Sample Input:
+
+4 4
+
+1     4   2   6
+
+8    3   5   12
+
+55  8   5   8
+
+6     1    5   4
+
+Sample Output:
+
+55
+
+-----------------------------------------------
+-----------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        int m=scan.nextInt();
+        int max=0;
+        int a[][]=new int[n][m];
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[i].length;j++){
+                a[i][j]=scan.nextInt();
+            }
+        }
+        
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[i].length;j++){
+               if( a[i][j]>max){
+                   max=a[i][j];
+               }
+            }
+        }
+        System.out.println(max);
+        
+    }
+}
