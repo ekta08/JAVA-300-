@@ -1,0 +1,49 @@
+Write a Program to copy all the elements of one array arr to another array arr1.
+
+
+
+Input Format:
+
+First-line contains a single integer N
+
+The next line contains N space-separated integer values
+
+Output Format:
+
+print N space-separated integer values of arr1
+
+
+Sample Input:
+
+7
+
+3 2 1 9 32 99 6
+
+Sample Output:
+
+3 2 1 9 32 99 6
+
+---------------------------------------------------------------
+---------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        int a[]=new int[n];
+        int b[]=new int[n];
+        int i;
+        for(i=0;i<a.length;i++){
+            a[i]=scan.nextInt();
+        }
+        for(i=0;i<a.length;i++){
+            b[i]=a[i];
+        }
+        for(i=0;i<b.length;i++){
+            System.out.print(b[i]+" ");
+        }
+    }
+}
