@@ -1,0 +1,69 @@
+Find the transpose of a matrix
+
+Input Format
+
+The first line contains an integer N representing the dimension of matrix.
+
+The next N line contains space-separated integers that describe matrix A elements
+
+Output Format:
+
+Prints the transpose of matrix.
+
+Sample Input:
+4                                                                                                                                                                                                                                   
+
+
+1 2 3 4                                                                                                                       
+5 6 1 2                                                                                                                       
+5 3 4 2                                                                                                                       
+8 6 9 2       
+                                                                                                                
+Sample Output:
+                                                                                                  
+1 5 5 8                                                                                                                       
+2 6 3 6                                                                                                                       
+3 1 4 9                                                                                                                       
+4 2 2 2
+
+----------------------------------------------------
+----------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+       int n=scan.nextInt();
+       int temp=0;
+       int a[][]=new int[n][n];
+       int b[][]=new int[n][n];
+       for(int i=0;i<a.length;i++){
+           for(int j=0;j<a[i].length;j++){
+               a[i][j]=scan.nextInt();
+           }
+       }
+       for(int i=0;i<b.length;i++){
+           for(int j=0;j<b[i].length;j++){
+               if(i==j){
+                  b[i][j]=a[i][j];
+                  
+              }else if(i!=j){
+                  temp=a[j][i];
+                  b[j][i]=a[i][j];
+                  b[i][j]=temp;
+              } 
+           }
+          }
+          for(int i=0;i<a.length;i++){
+           for(int j=0;j<a[i].length;j++){
+              System.out.print(b[i][j]+" ");
+           }
+           System.out.println();
+       }
+       
+       
+    }
+}
+
