@@ -1,0 +1,69 @@
+Write a Program to find the sum of diagonal elements of the N*N matrix(Square Matrix)
+
+
+
+Input Format:
+
+First-line contains a single integer N representing the number of rows and columns in a matrix
+
+Then follows N lines where each line contains N integers, where each line denotes the row and each number in each line denotes the column.
+
+Output Format:
+
+Print single integer representing the sum of diagonal elements of the matrix
+
+
+
+Sample Input:
+
+4
+
+1     4   2   6
+
+8    3   5   12
+
+55  8   5   8
+
+6     1    5   4
+
+Sample Output:
+
+13
+
+Explanation:
+
+Sum of right diagonal elements
+
+
+-----------------------------------------------
+-----------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n =scan.nextInt();
+        int sum=0;
+        int a[][]=new int[n][n];
+        for(int i =0;i<a.length;i++){
+            for(int j=0;j<a[i].length;j++){
+                a[i][j]=scan.nextInt();
+            }
+        }
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[i].length;j++){
+                if(i==j){
+                sum =sum+a[i][j];
+    
+                }
+            }
+        }
+        System.out.println(sum);
+        
+        
+        
+        
+    }
+}
