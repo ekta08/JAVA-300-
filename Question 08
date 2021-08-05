@@ -1,0 +1,37 @@
+Count the number of alphabets in a string.
+
+INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single integer value representing the number of alphabets in the given string.
+
+INPUT:
+
+sky
+
+OUTPUT:
+
+3
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        int count=0,i;
+        for(i=0;i<s.length();i++){
+            if(s.charAt(i)>=65 && s.charAt(i)<=90 || s.charAt(i)>=97 && s.charAt(i)<=122){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
