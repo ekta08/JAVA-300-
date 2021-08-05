@@ -1,0 +1,35 @@
+Write a program to reverse a given string.
+
+ INPUT FORMAT:
+
+There is one line of input: a single string, S.
+
+ OUTPUT FORMAT:
+
+A single line output: which is reverse of the string, S.
+
+ INPUT:
+
+computer
+
+OUTPUT:
+
+retupmoc
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s= scan.nextLine();
+        String t="";
+        for(int i=s.length()-1;i>=0;i--){
+            t +=s.charAt(i);
+        }
+        System.out.print(t);
+    }
+}
