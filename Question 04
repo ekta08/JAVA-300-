@@ -1,0 +1,33 @@
+Count the number of characters in a string.
+
+INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single integer value representing the number of characters in the given string.
+
+ 
+
+INPUT:
+
+computer
+
+OUTPUT:
+
+8
+
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s=scan.nextLine();
+        System.out.println(s.length());
+    }
+}
