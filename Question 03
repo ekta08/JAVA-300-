@@ -1,0 +1,40 @@
+Count the number of whitespaces in a string 
+
+INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single integer value representing the number of whitespaces in the given string.
+
+ 
+
+INPUT:
+
+Sky is very high.
+
+OUTPUT:
+
+4
+
+ 
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        int count = 0,i;
+        for(i=0;i<s.length()-1;i++){
+            if(s.charAt(i)== ' '){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
