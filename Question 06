@@ -1,0 +1,37 @@
+Program to find the largest word form a given string.
+
+Input Format
+
+The first line contains a string S.
+
+Output Format
+
+Prints the largest string from the given string S.
+Sample Input :
+
+Work is Worship
+
+Sample Output :
+
+Worship
+
+-----------------------------------------------------
+-----------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s=scan.nextLine();
+       String [] words= s.split(" ");
+       String largest =words[0];
+       for(int i=0;i<words.length;i++){
+           if(words[i].length() > largest.length() ){
+               largest=words[i];
+           }
+       }
+       System.out.print(largest);
+    }
+}
