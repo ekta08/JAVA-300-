@@ -1,0 +1,36 @@
+Program to Concatenate two given string
+
+ INPUT FORMAT:
+
+first line contains a string, S.
+
+second line contains a string, S1
+
+OUTPUT FORMAT:
+
+Single line string representing the concatenation of two given string, i.e. S+S1 
+
+ INPUT:
+
+
+TAP 
+ACADEMY                                                                                                    
+
+OUTPUT:
+
+TAPACADEMY 
+
+----------------------------------------------------
+----------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s =scan.nextLine();
+        String s2=scan.nextLine();
+        System.out.print(s+s2);
+    }
+}
