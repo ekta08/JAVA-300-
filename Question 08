@@ -1,0 +1,41 @@
+Remove the numeric character from the string 
+
+INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A String after removing numeric characters from the given string.
+
+ 
+
+INPUT:
+
+hello123
+
+OUTPUT:
+
+hello
+
+--------------------------------------------
+--------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s=scan.nextLine();
+        String t ="";
+        for(int i =0;i<s.length();i++){
+            if(s.charAt(i)>='0' && s.charAt(i)<='9'){
+                
+            }else {
+                t+=s.charAt(i);
+            }
+        }
+        System.out.println(t);
+    }
+}
