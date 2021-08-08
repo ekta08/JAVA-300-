@@ -1,0 +1,44 @@
+Sort the given string.
+
+ INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single integer value representing the given string in sorted order.
+
+ 
+
+INPUT:
+
+
+TAP ACADEMY                                                                                                    
+
+OUTPUT:
+AAACDEMPTY 
+
+---------------------------------------
+---------------------------------------
+
+solution:-
+
+import java.util.Arrays;
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s=scan.nextLine();
+       String t="";
+       for(int i=0;i<s.length();i++) {
+    	   if(s.charAt(i)>=65 && s.charAt(i)<=90 || s.charAt(i)>=97 && s.charAt(i)<=122) {
+    		   t=t+s.charAt(i);
+    	   }
+       }
+       char c[]=t.toCharArray();
+       Arrays.sort(c);
+       for(int i=0;i<t.length();i++) {
+       System.out.print(c[i]);
+       }
+    }
+}
