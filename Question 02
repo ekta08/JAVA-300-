@@ -1,0 +1,44 @@
+Remove uppercase Characters from a string 
+
+INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single string after removing the uppercase Characters from the given string.
+
+INPUT:
+
+I Love My Country
+
+OUTPUT:
+
+ ove y ountry
+
+---------------------------------------------------------
+---------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+       String s = scan.nextLine();
+       String t="";
+       char ch ;
+       int i=0;
+       while(i<s.length()){
+          ch = s.charAt(i);
+          if(ch >='A' && ch<='Z'){
+              i++;
+          }else{
+              t += ch;
+              i++;
+          }
+       }
+ 
+       System.out.println(t);
+    }
+}
