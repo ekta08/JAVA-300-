@@ -1,0 +1,71 @@
+Program to find the given string is anagram or Not
+
+Input Format
+
+The first line contains a string denoting a .
+The second line contains a string denoting b .
+
+Output Format
+
+Print "anagrams" if  a and b are anagrams of each other; otherwise, print "not anagrams" instead.
+Sample Input 0:
+
+anagram
+
+marganaa
+
+Sample Output 0:
+
+not anagrams
+
+
+Sample Input 1:
+
+Listen
+
+silent
+
+Sample Output 1:
+
+anagrams
+
+----------------------------------------------------------------
+----------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+       String s= scan.nextLine();
+       String t=scan.nextLine();
+       boolean anagram=true;
+       char a[]=s.toCharArray();
+       char b[]=t.toCharArray();
+       if(a.length==b.length){
+       for(int i=0;i<a.length;i++){
+           for(int j=0;j<b.length;j++){
+               if(a[i]==b[j]){
+                   a[i]='#';
+                   b[j]='#';
+               }
+           }
+        }
+       }
+       for(int i=0;i<a.length||i<b.length;i++){
+           if(a[i]!='#'){
+               anagram=false;
+           }
+           if(b[i]!='#'){
+               anagram=false;
+           }
+       }
+       if(anagram){
+           System.out.println("anagrams");
+       }else{
+           System.out.println("not anagrams");
+       }
+       
+    }
+}
