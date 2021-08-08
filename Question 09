@@ -1,0 +1,41 @@
+Remove  the number of consonants in a string.
+
+ INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A string after removing consonants from the given string.
+
+ 
+
+INPUT:
+
+HELLO WORLD
+
+OUTPUT:
+
+EO O
+
+----------------------------------------------------------
+----------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s =scan.nextLine();
+        String t = "";
+        for(int i=0;i<s.length();i++){
+            char ch =s.charAt(i);
+            if(ch>=66 && ch<=68 || ch>=70 && ch<=72 || ch>=74 && ch<=78 ||ch>=80 && ch<=84 || ch>=86 && ch<=90 ||ch>=98 && ch<=100 || ch>=102 && ch<=104 ||ch>=106 && ch<=110 ||ch>=112 && ch<=116 ||ch>=118 && ch<=122){
+             }else{
+                 t+=ch;
+             }
+        }
+        System.out.println(t);
+    }
+}
