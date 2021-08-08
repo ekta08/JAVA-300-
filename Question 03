@@ -1,0 +1,52 @@
+Program to find the frequency of substring from a given string
+
+Input Format
+
+The first line contains a string, S.
+The second line contains a substring SS of a string S.
+
+Output Format
+
+Print the frequency of each characters in the substring SS.
+
+Sample Input :
+
+TimadmgfdiTimsvsTim
+
+Tim
+
+Sample Output :
+
+3
+
+---------------------------------------------
+---------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+       String a=scan.nextLine();
+       String b=scan.nextLine();
+       String s=a.toUpperCase();
+       String ss=b.toUpperCase();
+       int substring=0;
+       for(int i=0;i<=s.length()-ss.length();i++){
+            int count=0;
+           for(int j=0;j<ss.length();j++){
+               if(s.charAt(i+j)==s.charAt(j)){
+                   count++;
+               }
+           }
+           if(count==ss.length()){
+               substring++;
+           }
+           
+       }
+       System.out.println(substring);
+     
+       
+    }
+}
