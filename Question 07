@@ -1,0 +1,43 @@
+print all the substring of length three from a given string.
+
+ INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+print all the substring one below the other
+
+ 
+
+INPUT:
+
+Hello
+
+OUTPUT:
+
+Hel
+
+ell
+
+llo
+
+----------------------------------------------------
+----------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s= scan.nextLine();
+        int i=0;
+        while(i<s.length()-2){
+            String t="";
+            t=t+s.charAt(i)+s.charAt(i+1)+s.charAt(i+2);
+            i++;
+            System.out.println(t);
+           }
+    }
+}
