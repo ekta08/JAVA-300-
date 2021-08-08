@@ -1,0 +1,39 @@
+Program to calculate the sum of all the digits in a string & concatenate the sum in the end of the string.
+
+Input Format.
+
+The first line contains a string S.
+
+Output Format.
+
+Single line string with sum of digits concatenated at the end.
+Sample Input :
+
+1One 2Two 3Three
+
+Sample Output :
+
+One Two Three6
+
+------------------------------------------------
+------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        int t=0;
+        String ss="";
+        for(int i=0;i<s.length();i++){
+         if(s.charAt(i) >='0' && s.charAt(i) <='9'){
+             t+=(int)(s.charAt(i)-'0');
+              }else{
+             ss +=s.charAt(i);
+         }
+        }
+        System.out.print(ss+t);
+    }
+}
