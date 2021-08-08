@@ -1,0 +1,39 @@
+Program to Remove extra whitespace from the string.
+
+Input Format.
+
+The first line contains a string S.
+
+Output Format.
+
+Single line string no extra white space.
+Sample Input :
+
+Java       Programing       Language 
+
+Sample Output :
+
+Java Programing Language
+
+---------------------------------------------
+---------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s=scan.nextLine();
+        String t="";
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)!=' '){
+                t+=s.charAt(i);
+            }
+            if(s.charAt(i)==' '&&s.charAt(i+1)!=' '){
+                t+=s.charAt(i);
+            }
+        }
+        System.out.print(t);
+    }
+}
