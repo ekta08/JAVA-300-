@@ -1,0 +1,39 @@
+Program to reverse all the words form a given string.
+
+Input Format
+
+The first line contains a string S.
+
+Output Format
+
+Single line string with each word in reversed order.
+Sample Input :
+
+Reverse String
+
+Sample Output :
+
+esreveR gnirtS
+
+----------------------------------------------------------
+----------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s=scan.nextLine();
+        String [] words=s.split(" ");
+        
+        for(int i=0;i<words.length;i++){
+            String t="";
+           String str= words[i];
+           for(int j=str.length()-1;j>=0;j--){
+               t=t+str.charAt(j);
+           }
+           System.out.print(t+" ");
+        }
+    }
+}
