@@ -1,0 +1,40 @@
+Convert the given string into Lower Case
+
+INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single string with all lower case letters.
+
+ INPUT:
+
+STRinG PrOGRam
+
+OUTPUT:
+
+string program
+
+ ------------------------------------------------------
+ ------------------------------------------------------
+ 
+ solution:-
+ 
+ import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        String t="";
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)>=65 && s.charAt(i)<=90){
+                char ch = (char)(s.charAt(i)+32);
+                t+=ch;
+            }else{
+                t+=s.charAt(i);
+            }
+        }
+        System.out.println(t);
+    }
+}
