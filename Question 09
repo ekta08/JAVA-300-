@@ -1,0 +1,58 @@
+Find the frequency of characters in the given string
+
+ INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+N lines representing the frequency of each character from the given string.
+
+ 
+
+INPUT:
+
+
+TAP ACADEMY                                                                                                    
+
+OUTPUT:
+
+T-1                                                                                                                             
+A-3                                                                                                                             
+P-1                                                                                                                             
+C-1                                                                                                                             
+D-1                                                                                                                             
+E-1                                                                                                                             
+M-1                                                                                                                             
+Y-1   
+
+-------------------------------------------------
+-------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s=scan.nextLine();
+        char c[]=s.toCharArray();
+        int i,j;
+        for(i=0;i<c.length;i++){
+            int count=1;
+            if(c[i]>=65 && c[i]<=90||c[i]>=97 &&c[i]<=122){
+              if(c[i]!='#'){
+                for(j=i+1;j<c.length;j++){
+                    if(c[i]==c[j]){
+                       c[j] ='#';
+                        count++;
+                    }
+                }
+                 System.out.println(c[i] + "-"+count);
+            }
+            }
+        }
+    }     
+}
