@@ -1,0 +1,47 @@
+Swap the given string into alternate cases
+
+INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single string with case swap, upper case letter to lower and lower case to upper.
+
+ INPUT:
+
+STRinG PrOGRam
+
+OUTPUT:
+
+strINg pRogrAM
+
+ 
+
+-------------------------------------------------
+-------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        String t="";
+        int i ;
+        for(i=0;i<s.length();i++){
+            if(s.charAt(i)>='A'&&s.charAt(i)<='Z'){
+                char c=(char)(32+s.charAt(i));
+                t=t+c;
+                
+            } else if(s.charAt(i)>='a'&&s.charAt(i)<='z'){
+                char c=(char)(s.charAt(i)-32);
+                t=t+c;
+            }else{
+                t=t+s.charAt(i);
+            }
+        }
+        System.out.println(t);
+    }
+}
