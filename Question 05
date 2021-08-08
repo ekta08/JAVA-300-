@@ -1,0 +1,36 @@
+Replace all uppercase letters in a given string into '*' .
+
+INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+The single string value has replaced all upper case letter in string into '*'
+
+ 
+
+INPUT:
+
+Rrooman
+
+OUTPUT:
+
+*rooman
+
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+solution:-
+
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+         String s=scan.nextLine();
+         String t="";
+               t=s.replaceAll( "[A-Z]","*");
+          System.out.println(t);
+}
+}   
