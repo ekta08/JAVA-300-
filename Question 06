@@ -1,0 +1,46 @@
+Count the number of consonants in a string.
+
+ INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single integer value representing the number of consonants in the given string.
+
+ 
+
+INPUT:
+
+HELLO WORLD
+
+OUTPUT:
+
+7
+
+-------------------------------------------
+-------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        int count=0,letter=0;
+        char v[] ={'a','i','u','e','o','A','I','U','O','E'};
+        for(int i=0;i<s.length();i++){
+           if(s.charAt(i)>=65 && s.charAt(i)<=90 || s.charAt(i)>=97 && s.charAt(i)<=122){
+               letter++;
+                for(int j=0 ;j<v.length;j++){
+                    if(s.charAt(i)==v[j]){
+                        count++;
+                        }
+                     }
+                }   
+            }
+        
+         System.out.println(letter-count);
+    }
+}
