@@ -1,0 +1,42 @@
+Count the number of vowels in a string.
+
+ INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single integer value representing the number of vowels in the given string.
+
+ 
+
+INPUT:
+
+HELLO WORLD
+
+OUTPUT:
+
+3
+
+--------------------------------------------
+--------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        char []v = {'a','i','o','u','e','A','I','O','U','E'};
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            for(int j=0;j<v.length;j++){
+            if(s.charAt(i)==v[j]){
+                count++;
+            }
+            }
+        }
+        System.out.println(count);
+    }
+}
