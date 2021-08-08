@@ -1,0 +1,45 @@
+Remove Lowercase Characters from a string 
+
+INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single string after removing the Lowercase Characters from the given string.
+
+INPUT:
+
+I Love My Country
+
+OUTPUT:
+
+I L M C
+
+
+---------------------------------------
+---------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+       String t="";
+       char ch ;
+       int i=0;
+       while(i<s.length()){
+          ch = s.charAt(i);
+          if(ch >='a' && ch<='z'){
+              i++;
+          }else{
+              t += ch;
+              i++;
+          }
+       }
+ 
+       System.out.println(t);
+    }
+}
