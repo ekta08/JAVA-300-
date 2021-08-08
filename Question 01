@@ -1,0 +1,38 @@
+Remove special Characters from a string 
+
+INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A single string after removing the special characters from the given string.
+
+INPUT:
+
+xyz@gmail.com
+
+OUTPUT:
+
+xyzgmailcom
+
+-----------------------------------------
+-----------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        String t ="";
+        int i;
+        for(i=0;i<s.length();i++){
+            if(s.charAt(i)>=65 && s.charAt(i)<=90 || s.charAt(i)>=97 && s.charAt(i)<=122 || s.charAt(i)>='0' && s.charAt(i)<='9'){
+                t+=s.charAt(i);
+            }
+        }
+        System.out.print(t);
+    }
+}
