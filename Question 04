@@ -1,0 +1,46 @@
+Program to remove duplicate character form a given string.
+
+Input Format
+
+The first line contains a lowercase string S.
+
+Output Format
+
+Prints the string after removing the duplicate character from string S.
+Sample Input :
+
+hello
+
+Sample Output :
+
+helo
+
+---------------------------------------------
+---------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan=new Scanner(System.in);
+        String s =scan.nextLine();
+        String str=s.toLowerCase();
+      char[] chars = str.toCharArray();
+     StringBuilder sb = new StringBuilder();
+     boolean repeatedChar;
+     for (int i = 0; i < chars.length; i++) {
+          repeatedChar = false;
+          for (int j = i + 1; j < chars.length; j++) {
+             if (chars[i] == chars[j]) {
+                repeatedChar = true;
+                break;
+             }
+        }
+         if (!repeatedChar) {
+            sb.append(chars[i]);
+        }
+    }
+    System.out.print(sb);
+    }
+}
