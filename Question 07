@@ -1,0 +1,44 @@
+Remove  the number of vowels in a string.
+
+ INPUT FORMAT:
+
+There is one line of input: a single string, S. 
+
+OUTPUT FORMAT:
+
+A string after removing vowels from the given string.
+
+ 
+
+INPUT:
+
+HELLO WORLD
+
+OUTPUT:
+
+HLL WRLD
+
+---------------------------------------------
+---------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        String t="";
+       for(int i=0;i<s.length();i++){
+           char ch=s.charAt(i);
+           if(ch =='a' || ch =='i' || ch =='o' || ch =='u' || ch =='e' || ch =='A' || ch =='I' || ch =='O' || ch =='U' || ch =='E' ){
+           }else{
+               t+=ch;
+           }
+           
+       }
+       System.out.println(t);
+        
+       
+    }
+}
