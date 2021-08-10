@@ -1,0 +1,64 @@
+Watson likes to challenge Sherlock's math ability. He will provide a starting and ending value that describes a range of integers, inclusive of the endpoints. Sherlock must determine the number of square integers within that range.
+
+Note: A square integer is an integer which is the square of an integer, e.g. 1,4,9,16,25.
+
+Example
+
+a = 24
+
+b = 49
+
+There are three square integers in the range: 25, 36, and 49. Return 3.
+
+Function Description
+
+Complete the squares function in the editor. It should return an integer representing the number of square integers in the inclusive range from a to b.
+
+squares have the following parameter(s):
+
+int a: the lower range boundary
+int b: the upper range boundary
+Returns
+
+int: the number of square integers in the range
+Input Format
+
+First-line contains two space-separated integers, a and b, the starting and ending integers in the ranges.
+
+
+Sample Input:
+
+3 9
+
+Sample Output:
+
+2
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    public static int squares(int a, int b){
+        int count=0;
+        for(int i=a;i<=b;i++){
+           int j=1;
+           while(j<i){
+               if(i%j==0 && i/j==j){
+                   count++;
+               }
+               j++;
+           }
+        }
+        return count;
+       
+    }
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int a=scan.nextInt();
+        int b=scan.nextInt();
+        System.out.print(squares(a,b));
+    }
+}
