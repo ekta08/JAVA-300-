@@ -1,0 +1,52 @@
+In the Mini project, the 7th module is to evaluate the expression y = x + x^2+........+x^n. Andy allotted this function to Bob. Collect and display the values returned by the called function. Test your program and report the results obtained.
+Help Bob to write a program to evaluate the expression?
+
+Get the value of x and n from the user as input
+Use the following function:
+private int calculate(int x, int n)
+
+where the first argument corresponds to the value of x and the second corresponds to n respectively.
+
+
+
+Input Format:
+
+First-line contains two space-separated integer values x and n
+
+Output Format:
+
+Single integer value representing the result of the expression.
+
+
+Sample Input :
+2 3
+Sample Output:
+14
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+    Solution(int x,int n){
+        System.out.print(calculate(x,n));
+    }
+     
+    private static int calculate(int x,int n){
+        int sum=0,cal=1;
+        for(int i=1;i<=n;i++){
+            cal*=x;
+            sum+=cal;
+        }
+        return sum;
+    }
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int x=scan.nextInt();
+        int n=scan.nextInt();
+        new Solution(x,n);
+        
+    }
+}
