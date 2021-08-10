@@ -1,0 +1,74 @@
+Alice has the following two types of taxis:
+
+Online taxi: It can be booked by using an online application from phones 
+Classic taxi: It can be booked anywhere on the road
+The online taxis cost Oc for the first Of km and Od for every km afterward. The classic taxis travel at a speed of Cs km per minute. The cost of classic taxis are Cb, Cm, and Cd that represents the base fare, cost for every minute that is spent in the taxi, and cost for each kilometer that you ride.
+
+You are going to the office from your home. Your task is to minimize the cost that you are required to pay. The distance from your home to the office is D. You are required to select whether you want to use online or classic taxis to go to your office. If both the taxis cost the same, then you must use an online taxi.
+
+Input format
+
+First line: Single integer D that denotes the distance from your house to the office
+Next line: Three integers Oc, Of , and Od  
+Next line: Four integers Cs , Cb, Cm , and Cd
+Output format
+
+If you select an online taxi to travel, then print a string 'Online Taxi'. Otherwise, select 'Classic Taxi'. You can print this string in a new, single line.
+
+
+Sample Input:
+13
+6 7 4
+4 2 1 2
+Sample Output:
+Online Taxi
+
+Explanation
+If Felix choose to use Online Taxi, it will cost Felix a total of 6+(13−7)*4=30
+
+While the classic taxi will cost Felix a total of 2+[13/4]*1+13*2=31
+
+Therefore Felix will choose Online Taxi over Classic Taxi
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+solution:-
+
+class Solution{
+     
+     Solution(int[] ao,int[] co,int D)
+     {  int  ocal=0,ccal=0;
+        if(ao[2]==0){
+            ocal=ao[0];
+        }else{
+         ocal=ao[0]+(D-ao[1])*ao[2];
+        }
+        if(co[3]==0){
+            ccal=co[1]+(D/co[0])*co[2];
+        }else{
+         ccal=co[1]+(D/co[0])*co[2]+D*co[3];
+        }
+        if(ocal>ccal){
+            System.out.println("Classic taxi");
+        }else if(ocal<ccal || ocal==ccal){
+           System.out.println("Online taxi");
+       }
+         
+     }
+    
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int D = scan.nextInt();
+        int[] ao=new int[3];
+        int[] co=new int[4];
+        for(int i=0;i<3;i++){
+            ao[i]  = scan.nextInt();
+        }
+        for(int i=0;i<4;i++){
+            co[i] = scan.nextInt();
+        }
+        new Solution(ao,co,D);
+        
+}
+}
