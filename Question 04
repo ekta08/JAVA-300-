@@ -1,0 +1,28 @@
+
+
+----------------------------------------------------
+----------------------------------------------------
+
+Solution:-
+
+
+import java.util.Scanner;
+class Solution{
+      static int x;        //static variable has global scope                 
+      static int n;
+      static{                           //static block is executed befor main method
+          Scanner scan = new Scanner(System.in);
+          x =scan.nextInt();
+          n = scan.nextInt();
+      }
+      Solution(){                        //no need to pass argument in constructor bcz x and n are accessible
+         if(n>0 && x>0){
+         for(int i=1;i<=n;i++){
+         System.out.print(x*i+" ");
+         }
+        }
+      }
+      public static void main(String[] args){ 
+      Solution a =new Solution();                     //object is created also while creation call to constructor has happened
+    }
+}
