@@ -1,0 +1,53 @@
+In our school days, all of us have enjoyed the Games period. Raghav loves to play cricket and is Captain of his team. He always wanted to win all cricket matches. But only one last Games period is left in school now. After that, he will pass out from school.
+
+So, this match is very important to him. He does not want to lose it. So he has done a lot of planning to make sure his team wins. He is worried about only one opponent - Jatin, who is a very good batsman.
+
+Raghav has figured out 3 types of bowling techniques, that could be most beneficial for dismissing Jatin. He has given points to each of the 3 techniques.
+
+You need to tell him which is the maximum point value so that Raghav can select the best technique.
+
+3 numbers are given in input. Output the maximum of these numbers.
+
+
+
+Input Format:
+
+Three space-separated integers.
+
+Output Format:
+
+Maximum integer value
+
+
+
+Sample Input:
+8 6 1
+
+Sample Output:
+8
+
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+     static int bestScore(int[] a){
+        int max=0;
+        for(int i=0;i<3;i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+        }
+        return max;
+     }
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int[] a = new int[3];
+        for(int i=0;i<3;i++){
+            a[i]=scan.nextInt();
+        }
+        System.out.println(bestScore(a));
+    }
+}
