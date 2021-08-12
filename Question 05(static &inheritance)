@@ -1,0 +1,88 @@
+Create a class named Country with the following member variables/attributes
+ 
+
+Variable          
+
+ Datatype
+
+name
+
+ String 
+
+countryCode     
+
+ String 
+
+isdCode
+
+ String
+
+Create another class and write the main method to test the above class.
+
+ 
+
+[Note :
+
+Strictly adhere to the object-oriented specifications are given as a part of the problem statement.
+
+Use the same class names, attribute names, and method names.]
+
+ 
+
+Input Format:
+
+First-line contains Country Name
+
+the second line contains Country Code
+
+The next line contains ISD code 
+
+Output Format:
+
+ Refer to sample output for formatting specifications.
+
+ 
+
+Sample Input:
+
+India
+
+IND
+
+91
+
+Sample Output:
+
+Country Name : India
+
+Country Code : IND
+
+ISD Code : 91
+
+
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class country{
+    static String name;
+    static String countryCode;
+    static String isdCode;
+    static{
+        Scanner scan = new Scanner(System.in);
+        name=scan.next();
+        countryCode=scan.next();
+        isdCode=scan.next();
+    }
+    
+}
+class Solution extends country{
+    public static void main(String[] args){
+        
+        System.out.println("Country Name : "+ name);
+        System.out.println("Country Code :"+ countryCode);
+        System.out.println("ISD Code : "+ isdCode);
+    }
+}
