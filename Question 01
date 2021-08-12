@@ -1,0 +1,64 @@
+Cheeku is ill. He goes to Homeopathic Doctor - Dr. Thind. 
+
+The doctor always recommends medicines after reading from a secret book that he has. This secret book has a recipe to cure any disease. Cheeku is chalak. He wants to know if Doctor is giving him the correct medicine or not. 
+
+So he asks Doctor 2 questions -
+
+Length of the name of the Book.
+A number of pages in the Book.
+Cheeku will take medicine from him only if the Length of the name of the Book is lesser than or equal to 23 and the number of pages in the book is between 500 to 1000.
+
+Otherwise, he will not take medicine from this Doctor.
+
+Help Cheeku decide. Print "Take Medicine" if he should take medicine from the doctor. Else print "Don't take Medicine".
+
+
+
+Sample Input:
+
+2 space integers representing the length of Secret Book and number of pages in the Book
+
+Sample Output:
+
+Take Medicine
+
+Don't take Medicin
+
+
+Explanation:
+10 is less than 23.
+
+600 is between 500 and 1000.
+
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+solution:-
+
+import java.util.Scanner;
+class Solution{
+        static String yes;
+        static String no;
+        
+        static{
+            yes = "Take Medicine";
+            no =  "Don't take Medicine";
+        }
+        
+        Solution(int len,int page){
+        if(len<=23 && page>=500 && page<=1000){
+            System.out.print(yes);
+        }else{
+        System.out.print(no);
+        }
+    }
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int len=scan.nextInt();
+        int page=scan.nextInt();
+        Solution s1 = new Solution(len,page);
+       
+    }
+}
+
